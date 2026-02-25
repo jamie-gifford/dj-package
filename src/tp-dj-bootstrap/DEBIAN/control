@@ -3,4 +3,5 @@ Description: Bootstrap package for TP DJ
 Maintainer: Jamie Gifford <jamie@thoughtpatterns.com.au>
 Package: tp-dj-bootstrap
 Section: sound
-Version: 1
+Version: 2
+
