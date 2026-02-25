@@ -1,0 +1,5 @@
+Types: deb
+URIs: https://milonga.events/repo/
+Suites: test
+Components: main
+Signed-By: /etc/apt/keyrings/jamie-gifford.gpg

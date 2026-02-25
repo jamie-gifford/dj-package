@@ -1,0 +1,3 @@
+Package: *
+Pin: origin milonga.events
+Pin-priority: 1001
