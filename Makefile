@@ -25,7 +25,8 @@ publish: all
 	aptly publish snapshot -origin=ThoughtPatterns -gpg-key=jamie@thoughtpatterns.com.au $(snapshot) tp-dj
 	rsync -av $(HOME)/.aptly/public/tp-dj milonga@thoughtpatterns.com.au:www/html/repo
 
-
+bootstrap: tp-dj-bootstrap.deb
+	scp tp-dj-bootstrap.deb milonga@thoughtpatterns.com.au:www/html/repo
 
 
 
