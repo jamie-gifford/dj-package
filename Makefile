@@ -16,6 +16,7 @@ tp-dj-bootstrap.deb:
 
 clean:
 	rm $(packages)
+	find . -name '*~' -exec rm {} \;
 
 publish: all
 	if ( aptly publish show test tp-dj 2> /dev/null ) ; then aptly publish drop test tp-dj ; fi

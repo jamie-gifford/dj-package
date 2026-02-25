@@ -5,4 +5,4 @@ Type=Application
 Terminal=false
 Icon=dj-compressor
 Name=DJ Compressor
-Exec=calfjackhost compressor
+Exec=pw-jack calfjackhost compressor
