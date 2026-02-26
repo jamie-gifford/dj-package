@@ -1,5 +1,5 @@
 #!/bin/bash
 
-pw-jack jack-control -x system:capture_1 -x system:capture_2 Non-Mixer/Input 'Calf Studio Gear':Compressor 'LSP Parametric Equalizer x8 Stereo' 'LSP Graphic Equalizer x32 Stereo' Non-Mixer/Output system \; Non-Mixer/Headphone 'PulseAudio JACK Source'
+pw-jack jack-control -x system:capture_1 -x system:capture_2 Non-Mixer/Input 'Calf Studio Gear':Compressor 'LSP Parametric Equalizer x8 Stereo' 'LSP Graphic Equalizer x32 Stereo' Non-Mixer/Output "${DJ_OUTPUT:-system}" \; Non-Mixer/Headphone 'PulseAudio JACK Source'
 
 
