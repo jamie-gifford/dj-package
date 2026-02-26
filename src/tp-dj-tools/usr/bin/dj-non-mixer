@@ -1,0 +1,10 @@
+#!/bin/bash
+
+dir=$HOME/.dj/input-mixer
+if [ ! -d "$dir" ] ; then
+    mkdir -p "$dir"
+    cp /usr/share/dj/input-mixer/* "$dir"
+fi
+
+pw-jack non-mixer --osc-port 5678 "$dir"
+

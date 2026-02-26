@@ -5,6 +5,6 @@ Type=Application
 Terminal=false
 Icon=dj-non-mixer-input
 Name=DJ Non-mixer
-Exec=pw-jack non-mixer --osc-port 5678 /usr/local/share/dj/input-mixer
+Exec=dj-non-mixer
 
 
