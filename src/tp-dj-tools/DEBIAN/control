@@ -1,8 +1,8 @@
 Architecture: amd64
-Depends: non-mixer, calf-plugins, jalv, qdbus-qt5, pw-jack
+Depends: non-mixer, calf-plugins, jalv, qdbus-qt5, pipewire-jack
 Description: Tools for TP DJ
 Maintainer: Jamie Gifford <jamie@thoughtpatterns.com.au>
 Package: tp-dj-tools
 Section: sound
-Version: 6
+Version: 7
 
