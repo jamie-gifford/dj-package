@@ -1,0 +1,59 @@
+#!/usr/bin/env perl
+
+# Replacement for audtool, for use by tanda-audacious
+
+# Supported commands are:
+#
+# playlist-song-filename <index>
+# current-song-filename
+# playback-status (returns "playing" or "paused")
+# playlist-display
+# playlist-position (always returns 1)
+# playlist-length
+
+use strict;
+
+my $m3u = "/tmp/mixxxtool.m3u";
+
+open my $file, "<", $m3u || die "Can't open $m3u";
+chomp(my @lines = <$file>);
+close $file;
+
+my @playlist;
+my $status;
+
+foreach my $line (@lines) {
+    if ($line !~ /^#/) {
+        push @playlist, $line;
+    } else {
+        if ($line =~ /# mixxxtool playback-status (.*)/) {
+            $status = $1;
+        }
+    }
+}
+
+my $cmd = shift(@ARGV);
+
+if ($cmd eq "playlist-song-filename") {
+    my $idx = shift(@ARGV);
+    out($playlist[$idx - 1]);
+} elsif ($cmd eq "current-song-filename") {
+    out($playlist[0]);
+} elsif ($cmd eq "playback-status") {
+    out($status);
+} elsif ($cmd eq "playlist-display") {
+    out(join("\n", @playlist));
+} elsif ($cmd eq "playlist-position") {
+    out("1");
+} elsif ($cmd eq "playlist-length") {
+    out(scalar(@playlist));
+}
+
+sub out {
+    my ($out) = @_;
+    print "$out\n";
+}
+
+
+
+    
