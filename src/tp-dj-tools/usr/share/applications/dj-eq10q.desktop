@@ -5,4 +5,5 @@ Type=Application
 Terminal=false
 Icon=dj-eq10q
 Name=DJ EQ10
-Exec=pw-jack jalv.gtk http://lsp-plug.in/plugins/lv2/para_equalizer_x8_stereo
+Exec=pw-jack /usr/bin/dj-carla
+

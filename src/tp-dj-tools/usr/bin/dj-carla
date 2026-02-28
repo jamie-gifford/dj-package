@@ -1,0 +1,10 @@
+#!/bin/bash
+
+dir=$HOME/.dj/carla
+if [ ! -d "$dir" ] ; then
+    mkdir -p "$dir"
+    cp /usr/share/dj/carla/* "$dir"
+fi
+
+pw-jack carla "$dir/milonga-generic.carxp"
+
